@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+ <html eng="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SIP Calculator">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Siddharth Sharma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" type="text/css" href="sip-calculator.css">
+    <script src="sip-calculator.js"></script> 
+  </head>
+
+ <body>
+
+  <!-- ------------------HEADER--------------- -->
+
+ <div class="header">
+  <a href="#" class="logo">SIP Calculator.in</a>
+   <div class="menu">
+     <a href="#">SIP Calculator</a>
+     <a href="#">Top 10 Mutual Funds</a>
+   </div>
+ </div>
+
+ <div class="container">
+  <h1>SIP Calculator</h1>
+  <p>Calculate returns on your SIP investments.</p>
+
+<!---------------- CALCULATION ----------------> 
+
+<form>
+  <div class="calculation">
+    <div class="amount">
+      <label for="amount">Monthly Investment Amount (Rs.)</label><br>
+      <input type="text" id="principal" name="amount" placeholder="Amount" required></div>
+    
+    <div class="period">
+  <label for="period">Investment Period</label><br>
+      <input type="number" id="period" placeholder="5" required><span id="addon">Years</span> 
+      <br></div><br>
+    
+    <div class="interest">
+  <label for="interest">Expected Annual Returns (%)</label><br>
+      <input type="text" id="rate" name="amount" placeholder="6.5" required><br></div>
+    
+    <div class="frequency">
+  <label for="frequency">Adjust for Inflation ?</label><br>
+      <select id="freq">
+  <option value=12>Yes</option>
+  <option value=4>No</option>
+      </select><br><br></div>
+    
+    <button type=button onclick=maturity(); id="button">Submit</button>
+  
+    <table id="result" style="width: 100%;">
+  <thead>
+    <th>Summery</th>
+  </thead>
+  <tr>
+    <td>Expected Amount (Rs.)</td>
+    <td id='mv'></td>
+  </tr>
+  <tr>
+    <td>Amount Invested (Rs.)</td>
+    <td id="amntinvst"></td>
+  </tr>
+  <tr>
+    <td>Wealth Gain (Rs.)</td>
+    <td id="gain"></td>
+  </tr>
+</table> 
+  </div>
+  
+  <!-- -------------------INFORMATIONS---------------- --> 
+  
+  <div class="left-info">
+    <p> <b>Systematic Investment Plan (SIP)</b> is a kind of investment scheme offered by mutual fund companies. Using SIP one can invest small amount peridically (weekly, monthly, quaterly) into a selected mutual fund. For retail investors, SIP offers a well disciplined and passive approach to investing, to create wealth in long term (using the power of compounding). Since, the amount is invested on regular intervals (usually on monthly basis), it also reduces the impact of market volatility.</p>
+    <p>This calculator helps you calculate the wealth gain and expected returns for your monthly SIP investment. You get a rough estimate on the maturity amount for any monthly SIP, based on a projected annual return rate. </p>
+    <p style="font-size: 20px;">Benefits of SIP as compare to Lump sumps investment</p>
+    <ul>
+      <li>You don't need to speculate or focus on timing the market (which isn't the right way for generating returns over long term)</li>
+      <li>Amount is invested on monthly basis, so there is little to no impact of market volatility (unit cost averaging)</li>
+      <li>Passive and automated (monthly installments can be deducted automatically) approach makes you more committed to guranteed saving/investment</li>
+      <li>It's very flexible - you can create/update/cancel SIP anytime. Most of the funds starts as low as Rs. 1000 per month</li>
+    </ul>
+    <p>If you're not sure where to start or how to pick a mutual fund, then you should check out <a href=""#>Top 10 Mutual funds</a> listed there, from various fund classes(Debt, Liquid, Large Cap, Small & Mid Cap, ELSS etc), based on the recent performance (last 5 years) and CRISIL Ratings.</p><br>
+    <p><b>Note:</b> Please suggest new features or report any error, to help us improve this website.</p> 
+  </div>
+  <div class="right-info">
+    <p>Share On: 
+   <a href="#" class="fa fa-facebook">facebook</a>
+<a href="#" class="fa fa-twitter">twitter</a>
+<a href="#" class="fa fa-google">google+</a></p>
+    <p style="font-size: 25px;">Recommended Mutual Funds</p>
+    <table>
+  <tr>
+    <th>Mutual Fund</th>
+    <th>Expected Returns</th>
+  </tr>
+  <tr>
+    <td>UTI Nifty Index Fund</td>
+    <td>**</td>
+  </tr>
+  <tr>
+    <td>UTI Nifty N50 Index Fund</td>
+    <td>**</td>
+  </tr>
+  <tr>
+    <td>Motilal Oswal Nasdaq 100</td>
+    <td>**</td>
+  </tr>
+  <tr>
+    <td>Parag Parikh Liquid Fund</td>
+    <td>*</td>
+   </tr> 
+  </table>
+   <a href="#" class="button">Top 10 Mutual Funds</a>
+   </div>
+ 
+   </div>
+   <p id="disclaimer"><b>Disclaimer: </b>We DO NOT offer any financial advice here. <br>It should be used only for informational purpose.
+Investment in mutual funds or any asset class comes with an inherent risk. It's just a web based tool for getting a rough estimate about the future value on your SIP investments. The calculations are based on projected annual returns. The actual annual returns may be higher or lower than the estimated value. And it may have significant impact on the final returns. So, do your own analysis or hire a financial advisor/planner before making any decision. </p>
+   <p id="copyright"> &#169;2020- <a href="#">sip-calculator.in</a>- All Rights Reserved</p>
+
+  </div>
+
+ </body>
+</html>
